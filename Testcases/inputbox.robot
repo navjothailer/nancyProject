@@ -1,6 +1,5 @@
 *** Settings ***
 Library  SeleniumLibrary
-Library    Seleniums
 
 *** Variables ***
 ${browser}  chrome
