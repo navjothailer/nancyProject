@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230729 22:05:45.075" rpa="false" schemaversion="4">
-<suite id="s1" name="Inputbox" source="C:\Users\navjo\PycharmProjects\pythonProject2\Testcases\inputbox.robot">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230730 07:12:51.241" rpa="false" schemaversion="4">
+<suite id="s1" name="Inputbox" source="C:\Users\navjo\PycharmProjects\nancyProject\Testcases\inputbox.robot">
 <test id="s1-t1" name="nav" line="8">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230729 22:05:45.252" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com'.</msg>
-<status status="PASS" starttime="20230729 22:05:45.252" endtime="20230729 22:05:47.505"/>
+<msg timestamp="20230730 07:12:51.516" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com'.</msg>
+<status status="PASS" starttime="20230730 07:12:51.511" endtime="20230730 07:12:55.348"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230729 22:05:47.505" endtime="20230729 22:05:47.638"/>
+<status status="PASS" starttime="20230730 07:12:55.348" endtime="20230730 07:12:55.471"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>nopCommerce demo store</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230729 22:05:47.645" level="INFO">Page title is 'nopCommerce demo store'.</msg>
-<status status="PASS" starttime="20230729 22:05:47.638" endtime="20230729 22:05:47.645"/>
+<msg timestamp="20230730 07:12:55.478" level="INFO">Page title is 'nopCommerce demo store'.</msg>
+<status status="PASS" starttime="20230730 07:12:55.471" endtime="20230730 07:12:55.478"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230729 22:05:47.645" level="INFO">Clicking link 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20230729 22:05:47.645" endtime="20230729 22:05:48.048"/>
+<msg timestamp="20230730 07:12:55.482" level="INFO">Clicking link 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20230730 07:12:55.482" endtime="20230730 07:12:56.039"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${"email_txt"}</var>
 <arg>id:Email</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230729 22:05:48.052" level="INFO">${"email_txt"} = id:Email</msg>
-<status status="PASS" starttime="20230729 22:05:48.051" endtime="20230729 22:05:48.052"/>
+<msg timestamp="20230730 07:12:56.039" level="INFO">${"email_txt"} = id:Email</msg>
+<status status="PASS" starttime="20230730 07:12:56.039" endtime="20230730 07:12:56.039"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${"email_txt"}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230729 22:05:48.104" level="INFO">Element 'id:Email' is displayed.</msg>
-<status status="PASS" starttime="20230729 22:05:48.052" endtime="20230729 22:05:48.104"/>
+<msg timestamp="20230730 07:12:56.185" level="INFO">Element 'id:Email' is displayed.</msg>
+<status status="PASS" starttime="20230730 07:12:56.044" endtime="20230730 07:12:56.185"/>
 </kw>
 <kw name="Element Should Be Enabled" library="SeleniumLibrary">
 <arg>${"email_txt"}</arg>
 <doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230729 22:05:48.106" endtime="20230729 22:05:48.172"/>
+<status status="PASS" starttime="20230730 07:12:56.185" endtime="20230730 07:12:56.247"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${"email_txt"}</arg>
 <arg>abc@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230729 22:05:48.172" level="INFO">Typing text 'abc@gmail.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230729 22:05:48.172" endtime="20230729 22:05:48.436"/>
+<msg timestamp="20230730 07:12:56.250" level="INFO">Typing text 'abc@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230730 07:12:56.247" endtime="20230730 07:12:56.471"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230729 22:05:58.437" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20230729 22:05:48.436" endtime="20230729 22:05:58.437"/>
+<msg timestamp="20230730 07:13:06.473" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230730 07:12:56.472" endtime="20230730 07:13:06.473"/>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <arg>${"email_txt"}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20230729 22:05:58.437" endtime="20230729 22:05:58.538"/>
+<status status="PASS" starttime="20230730 07:13:06.473" endtime="20230730 07:13:06.559"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230729 22:06:08.541" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20230729 22:05:58.539" endtime="20230729 22:06:08.541"/>
+<msg timestamp="20230730 07:13:16.561" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230730 07:13:06.560" endtime="20230730 07:13:16.561"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230729 22:06:08.542" endtime="20230729 22:06:10.788"/>
+<status status="PASS" starttime="20230730 07:13:16.561" endtime="20230730 07:13:18.809"/>
 </kw>
-<status status="PASS" starttime="20230729 22:05:45.252" endtime="20230729 22:06:10.788"/>
+<status status="PASS" starttime="20230730 07:12:51.511" endtime="20230730 07:13:18.809"/>
 </test>
-<status status="PASS" starttime="20230729 22:05:45.077" endtime="20230729 22:06:10.789"/>
+<status status="PASS" starttime="20230730 07:12:51.241" endtime="20230730 07:13:18.809"/>
 </suite>
 <statistics>
 <total>
