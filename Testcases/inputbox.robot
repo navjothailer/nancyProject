@@ -2,7 +2,7 @@
 Library  SeleniumLibrary
 
 *** Variables ***
-${browser}  chrome
+${browser}  headless chrome
 ${url}  https://demo.nopcommerce.com
 *** Test Cases ***
 nav
