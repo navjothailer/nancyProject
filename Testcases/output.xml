@@ -1,101 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230730 07:48:42.013" rpa="false" schemaversion="4">
-<suite id="s1" name="Inputbox" source="C:\nancyProject\Testcases\inputbox.robot">
-<test id="s1-t1" name="nav" line="9">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230803 22:07:11.500" rpa="false" schemaversion="4">
+<suite id="s1" name="Implicitwait" source="C:\nancyProject\Testcases\implicitwait.robot">
+<test id="s1-t1" name="Registertest2" line="5">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>https://demowebshop.tricentis.com/register</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230730 07:48:42.270" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com'.</msg>
-<status status="PASS" starttime="20230730 07:48:42.270" endtime="20230730 07:48:44.954"/>
+<msg timestamp="20230803 22:07:11.753" level="INFO">Opening browser 'chrome' to base url 'https://demowebshop.tricentis.com/register'.</msg>
+<status status="PASS" starttime="20230803 22:07:11.753" endtime="20230803 22:07:14.792"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230730 07:48:44.954" endtime="20230730 07:48:45.080"/>
+<status status="PASS" starttime="20230803 22:07:14.793" endtime="20230803 22:07:14.923"/>
 </kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>nopCommerce demo store</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230730 07:48:45.087" level="INFO">Page title is 'nopCommerce demo store'.</msg>
-<status status="PASS" starttime="20230730 07:48:45.080" endtime="20230730 07:48:45.087"/>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<var>${implicittime}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<msg timestamp="20230803 22:07:14.924" level="INFO">${implicittime} = 0 seconds</msg>
+<status status="PASS" starttime="20230803 22:07:14.924" endtime="20230803 22:07:14.924"/>
 </kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230730 07:48:45.087" level="INFO">Clicking link 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20230730 07:48:45.087" endtime="20230730 07:48:45.748"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${implicittime}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230803 22:07:14.924" endtime="20230803 22:07:14.928"/>
 </kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${"email_txt"}</var>
-<arg>id:Email</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230730 07:48:45.752" level="INFO">${"email_txt"} = id:Email</msg>
-<status status="PASS" starttime="20230730 07:48:45.752" endtime="20230730 07:48:45.752"/>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230803 22:07:14.928" endtime="20230803 22:07:14.928"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230730 07:48:45.780" level="INFO">Element 'id:Email' is displayed.</msg>
-<status status="PASS" starttime="20230730 07:48:45.752" endtime="20230730 07:48:45.780"/>
+<kw name="Get Selenium Implicit Wait" library="SeleniumLibrary">
+<var>${implicittime}</var>
+<doc>Gets the implicit wait value used by Selenium.</doc>
+<msg timestamp="20230803 22:07:14.928" level="INFO">${implicittime} = 10 seconds</msg>
+<status status="PASS" starttime="20230803 22:07:14.928" endtime="20230803 22:07:14.928"/>
 </kw>
-<kw name="Element Should Be Enabled" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230730 07:48:45.781" endtime="20230730 07:48:45.819"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${implicittime}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230803 22:07:14.928" endtime="20230803 22:07:14.928"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20230803 22:07:14.928" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20230803 22:07:14.928" endtime="20230803 22:07:15.066"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<arg>abc@gmail.com</arg>
+<arg>name:FirstName1</arg>
+<arg>inderdeep</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230730 07:48:45.820" level="INFO">Typing text 'abc@gmail.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230730 07:48:45.820" endtime="20230730 07:48:45.926"/>
+<msg timestamp="20230803 22:07:15.066" level="INFO">Typing text 'inderdeep' into text field 'name:FirstName1'.</msg>
+<msg timestamp="20230803 22:07:23.099" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=115.0.5790.110)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00007FF762A93E62+57250]
+	(No symbol) [0x00007FF762A0BC02]
+	(No symbol) [0x00007FF7628DE0BB]
+	(No symbol) [0x00007FF7628BDD39]
+	(No symbol) [0x00007FF76293ABF7]
+	(No symbol) [0x00007FF76294D9DF]
+	(No symbol) [0x00007FF762936583]
+	(No symbol) [0x00007FF76290CC71]
+	(No symbol) [0x00007FF76290DE54]
+	GetHandleVerifier [0x00007FF762D44CF2+2879026]
+	GetHandleVerifier [0x00007FF762D96F30+3215472]
+	GetHandleVerifier [0x00007FF762D8FD4F+3186319]
+	GetHandleVerifier [0x00007FF762B25505+652869]
+	(No symbol) [0x00007FF762A17518]
+	(No symbol) [0x00007FF762A135F4]
+	(No symbol) [0x00007FF762A136EC]
+	(No symbol) [0x00007FF762A038E3]
+	BaseThreadInitThunk [0x00007FF9688326AD+29]
+	RtlUserThreadStart [0x00007FF969BAAA68+40]
+</msg>
+<msg timestamp="20230803 22:07:23.103" level="FAIL">Element with locator 'name:FirstName1' not found.</msg>
+<status status="FAIL" starttime="20230803 22:07:15.066" endtime="20230803 22:07:23.215"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230730 07:48:55.926" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20230730 07:48:45.926" endtime="20230730 07:48:55.926"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:LastName</arg>
+<arg>singh</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230803 22:07:23.215" endtime="20230803 22:07:23.220"/>
 </kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20230730 07:48:55.926" endtime="20230730 07:48:56.023"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Email</arg>
+<arg>abc@gamil.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230803 22:07:23.220" endtime="20230803 22:07:23.220"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230730 07:49:06.023" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20230730 07:48:56.023" endtime="20230730 07:49:06.023"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Password</arg>
+<arg>inderdeep@1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230803 22:07:23.220" endtime="20230803 22:07:23.220"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230730 07:49:06.023" endtime="20230730 07:49:08.198"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:ConfirmPassword</arg>
+<arg>inderdeep@1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230803 22:07:23.220" endtime="20230803 22:07:23.220"/>
 </kw>
-<status status="PASS" starttime="20230730 07:48:42.270" endtime="20230730 07:49:08.198"/>
+<status status="FAIL" starttime="20230803 22:07:11.753" endtime="20230803 22:07:23.220">Element with locator 'name:FirstName1' not found.</status>
 </test>
-<status status="PASS" starttime="20230730 07:48:42.014" endtime="20230730 07:49:08.201"/>
+<status status="FAIL" starttime="20230803 22:07:11.500" endtime="20230803 22:07:23.222"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Inputbox">Inputbox</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Implicitwait">Implicitwait</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230730 07:48:42.264" level="ERROR">Error in file 'C:\nancyProject\Testcases\inputbox.robot' on line 3: Importing library 'Seleniums' failed: ModuleNotFoundError: No module named 'Seleniums'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\nancyProject\Testcases
-  C:\Program Files\Python311\python311.zip
-  C:\Program Files\Python311\DLLs
-  C:\Program Files\Python311\Lib
-  C:\Program Files\Python311
-  C:\Users\navjo\AppData\Roaming\Python\Python311\site-packages
-  C:\Program Files\Python311\Lib\site-packages</msg>
+<msg timestamp="20230803 22:07:23.099" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=115.0.5790.110)
+Stacktrace:
+Backtrace:
+	GetHandleVerifier [0x00007FF762A93E62+57250]
+	(No symbol) [0x00007FF762A0BC02]
+	(No symbol) [0x00007FF7628DE0BB]
+	(No symbol) [0x00007FF7628BDD39]
+	(No symbol) [0x00007FF76293ABF7]
+	(No symbol) [0x00007FF76294D9DF]
+	(No symbol) [0x00007FF762936583]
+	(No symbol) [0x00007FF76290CC71]
+	(No symbol) [0x00007FF76290DE54]
+	GetHandleVerifier [0x00007FF762D44CF2+2879026]
+	GetHandleVerifier [0x00007FF762D96F30+3215472]
+	GetHandleVerifier [0x00007FF762D8FD4F+3186319]
+	GetHandleVerifier [0x00007FF762B25505+652869]
+	(No symbol) [0x00007FF762A17518]
+	(No symbol) [0x00007FF762A135F4]
+	(No symbol) [0x00007FF762A136EC]
+	(No symbol) [0x00007FF762A038E3]
+	BaseThreadInitThunk [0x00007FF9688326AD+29]
+	RtlUserThreadStart [0x00007FF969BAAA68+40]
+</msg>
 </errors>
 </robot>

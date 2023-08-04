@@ -15,7 +15,7 @@ Registertest2
     Log To Console     ${implicittime}
 
     Select Radio Button    Gender    M
-    Input Text  name:FirstName1     inderdeep           #wrong locator firstname is correct
+    Input Text  name:FirstName     inderdeep           #wrong locator firstname is correct
     Input Text   name:LastName    singh
 
     Input Text  name:Email     abc@gamil.com
