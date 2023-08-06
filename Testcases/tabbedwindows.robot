@@ -5,4 +5,7 @@ Library     SeleniumLibrary
 tabbedwindowtest
     Open Browser    https://demo.automationtesting.in/Windows.html  chrome
     Click Element    xpath://*[@id="Tabbed"]/a/button
-    Select Window   title=Selenium
+    Switch Window    title=Selenium
+    Click Element    xpath://*[@id="main_navbar"]/ul/li[7]/a
+    Sleep    3
+    Close All Browsers

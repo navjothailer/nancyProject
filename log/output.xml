@@ -1,90 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230803 22:03:38.020" rpa="false" schemaversion="4">
-<suite id="s1" name="Inputbox" source="C:\nancyProject\Testcases\inputbox.robot">
-<test id="s1-t1" name="nav" line="8">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230806 10:05:07.269" rpa="false" schemaversion="4">
+<suite id="s1" name="Switchtomultibrowser" source="C:\nancyProject\Testcases\switchtomultibrowser.robot">
+<test id="s1-t1" name="MoreBrowsersTest" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>https://www.google.com/</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230803 22:03:38.412" level="INFO">Opening browser 'headless chrome' to base url 'https://demo.nopcommerce.com'.</msg>
-<status status="PASS" starttime="20230803 22:03:38.407" endtime="20230803 22:03:42.610"/>
+<msg timestamp="20230806 10:05:07.514" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20230806 10:05:07.514" endtime="20230806 10:05:09.798"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230803 22:03:42.610" endtime="20230803 22:03:42.739"/>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>nopCommerce demo store</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230803 22:03:42.754" level="INFO">Page title is 'nopCommerce demo store'.</msg>
-<status status="PASS" starttime="20230803 22:03:42.739" endtime="20230803 22:03:42.755"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230803 22:03:42.758" level="INFO">Clicking link 'xpath:/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a'.</msg>
-<status status="PASS" starttime="20230803 22:03:42.755" endtime="20230803 22:03:43.839"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${"email_txt"}</var>
-<arg>id:Email</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230803 22:03:43.840" level="INFO">${"email_txt"} = id:Email</msg>
-<status status="PASS" starttime="20230803 22:03:43.840" endtime="20230803 22:03:43.840"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${"password"}</var>
-<arg>id:Password</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230803 22:03:43.840" level="INFO">${"password"} = id:Password</msg>
-<status status="PASS" starttime="20230803 22:03:43.840" endtime="20230803 22:03:43.840"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230803 22:03:43.867" level="INFO">Element 'id:Email' is displayed.</msg>
-<status status="PASS" starttime="20230803 22:03:43.840" endtime="20230803 22:03:43.867"/>
-</kw>
-<kw name="Element Should Be Enabled" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230803 22:03:43.868" endtime="20230803 22:03:43.893"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${"email_txt"}</arg>
-<arg>abc@gmail.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230803 22:03:43.900" level="INFO">Typing text 'abc@gmail.com' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230803 22:03:43.900" endtime="20230803 22:03:43.981"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${"password"}</arg>
-<arg>password1</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230803 22:03:43.982" level="INFO">Typing password into text field 'id:Password'.</msg>
-<msg timestamp="20230803 22:03:44.017" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230803 22:03:44.063" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230803 22:03:43.981" endtime="20230803 22:03:44.063"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230803 22:03:44.063" level="INFO">Clicking element 'xpath:/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/div[2]/form/div[3]/button'.</msg>
-<status status="PASS" starttime="20230803 22:03:44.063" endtime="20230803 22:03:44.358"/>
+<status status="PASS" starttime="20230806 10:05:09.798" endtime="20230806 10:05:09.927"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230803 22:03:54.359" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20230803 22:03:44.358" endtime="20230803 22:03:54.359"/>
+<msg timestamp="20230806 10:05:12.928" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230806 10:05:09.927" endtime="20230806 10:05:12.928"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230803 22:03:54.359" endtime="20230803 22:03:56.478"/>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.bing.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230806 10:05:12.928" level="INFO">Opening browser 'chrome' to base url 'https://www.bing.com/'.</msg>
+<status status="PASS" starttime="20230806 10:05:12.928" endtime="20230806 10:05:15.629"/>
 </kw>
-<status status="PASS" starttime="20230803 22:03:38.407" endtime="20230803 22:03:56.479"/>
+<status status="PASS" starttime="20230806 10:05:07.514" endtime="20230806 10:05:15.629"/>
 </test>
-<status status="PASS" starttime="20230803 22:03:38.021" endtime="20230803 22:03:56.479"/>
+<status status="PASS" starttime="20230806 10:05:07.272" endtime="20230806 10:05:15.631"/>
 </suite>
 <statistics>
 <total>
@@ -93,7 +37,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Inputbox">Inputbox</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Switchtomultibrowser">Switchtomultibrowser</stat>
 </suite>
 </statistics>
 <errors>
